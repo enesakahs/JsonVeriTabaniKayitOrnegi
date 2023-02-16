@@ -1,0 +1,14 @@
+{
+    "Kullanıcılar": [
+        {
+            "Kullanıcıadı": "enesbakır",
+            "Sifre": "Aa123456",
+            "Mail": "enes@mail.com"
+        },
+        {
+            "Kullanıcıadı": "NurKifayet",
+            "Sifre": "Nur123456",
+            "Mail": "nur@mail.com"
+        }
+    ]
+}
