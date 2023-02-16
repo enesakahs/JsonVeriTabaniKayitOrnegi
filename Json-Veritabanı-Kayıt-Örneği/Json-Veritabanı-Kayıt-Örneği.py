@@ -155,7 +155,7 @@ class Site:
 
 
     def sendactivation(self): #AKTİVASYON GONDER
-        with open("C:/Users/enes_/OneDrive/Masaüstü/Python Egitimleri/Json-Veritabanı-Kayıt-Örneği/Aktivasyon.txt","w",encoding="utf-8") as File:
+        with open("C:/Users/OneDrive/Masaüstü/Python Egitimleri/Json-Veritabanı-Kayıt-Örneği/Aktivasyon.txt","w",encoding="utf-8") as File:
             activation = str(random.randint(10000,99999))
             File.write("Aktivasyon Kodunuz: " + activation)
         return activation
@@ -176,7 +176,7 @@ class Site:
         except FileNotFoundError: #dosyayı bulamazsa verecegı hata. Dosya yoksa yenı dosya olusturacak
             with open("C:/Users/OneDrive/Masaüstü/Python Egitimleri/Json-Veritabanı-Kayıt-Örneği/Kullanıcılar.json","w",encoding="utf-8") as File:
                 File.write("{}")
-            with open("C:/UsersOneDrive/Masaüstü/Python Egitimleri/Json-Veritabanı-Kayıt-Örneği/Kullanıcılar.json","r",encoding="utf-8") as File:
+            with open("C:/Users/OneDrive/Masaüstü/Python Egitimleri/Json-Veritabanı-Kayıt-Örneği/Kullanıcılar.json","r",encoding="utf-8") as File:
                 data=json.load(File)
         return data
 
