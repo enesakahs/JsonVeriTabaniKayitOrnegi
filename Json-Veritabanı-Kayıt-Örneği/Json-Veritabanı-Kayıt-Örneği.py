@@ -171,12 +171,12 @@ class Site:
 
     def getdata(self): #VERİ AL (görevi veritabanından verileri alıp icinde barındırmak)
         try:
-            with open("C:/Users/enes_/OneDrive/Masaüstü/Python Egitimleri/Json-Veritabanı-Kayıt-Örneği/Kullanıcılar.json","r",encoding="utf-8") as File:
+            with open("C:/Users/OneDrive/Masaüstü/Python Egitimleri/Json-Veritabanı-Kayıt-Örneği/Kullanıcılar.json","r",encoding="utf-8") as File:
                 data=json.load(File) #bulursa okuyacak verılerı ıcıne atacak
         except FileNotFoundError: #dosyayı bulamazsa verecegı hata. Dosya yoksa yenı dosya olusturacak
-            with open("C:/Users/enes_/OneDrive/Masaüstü/Python Egitimleri/Json-Veritabanı-Kayıt-Örneği/Kullanıcılar.json","w",encoding="utf-8") as File:
+            with open("C:/Users/OneDrive/Masaüstü/Python Egitimleri/Json-Veritabanı-Kayıt-Örneği/Kullanıcılar.json","w",encoding="utf-8") as File:
                 File.write("{}")
-            with open("C:/Users/enes_/OneDrive/Masaüstü/Python Egitimleri/Json-Veritabanı-Kayıt-Örneği/Kullanıcılar.json","r",encoding="utf-8") as File:
+            with open("C:/UsersOneDrive/Masaüstü/Python Egitimleri/Json-Veritabanı-Kayıt-Örneği/Kullanıcılar.json","r",encoding="utf-8") as File:
                 data=json.load(File)
         return data
 
@@ -190,7 +190,7 @@ class Site:
             self.datas["Kullanıcılar"]=list()
             self.datas["Kullanıcılar"].append({"Kullanıcıadı":UN,"Sifre":Password,"Mail":mail})
 
-        with open("C:/Users/enes_/OneDrive/Masaüstü/Python Egitimleri/Json-Veritabanı-Kayıt-Örneği/Kullanıcılar.json","w",encoding="utf-8") as File:
+        with open("C:/Users/OneDrive/Masaüstü/Python Egitimleri/Json-Veritabanı-Kayıt-Örneği/Kullanıcılar.json","w",encoding="utf-8") as File:
             json.dump(self.datas,File,ensure_ascii=False,indent=4)
             print("Kayıt BASARILI..")
         self.backtomenu()
